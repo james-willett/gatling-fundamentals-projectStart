@@ -1,0 +1,19 @@
+plugins {
+    id 'scala'
+    id "com.github.lkishalmi.gatling" version "0.7.3"
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.8'
+}
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    jcenter()
+}
+
+ScalaCompileOptions.metaClass.daemonServer = true
+ScalaCompileOptions.metaClass.fork = true
+ScalaCompileOptions.metaClass.useAnt = false
+ScalaCompileOptions.metaClass.useCompileDaemon = false
+
